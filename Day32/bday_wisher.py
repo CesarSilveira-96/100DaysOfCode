@@ -20,7 +20,7 @@ def send_email(receiver_email,message):
         connection.sendmail(
             from_addr=USER_EMAIL,
             to_addrs=receiver_email,
-            msg=f"Subject: Happy Anniversary! \n\n {message}"
+            msg=f"Subject: Feliz aniversário! s2 \n\n  O aniversario é hoje mas você está sempre de parabens!Desejo tudo de melhor para a pessoa mais linda e incrivel que tive o prazer de conhecer! Hoje você fica um tiquinho mais próxima da minha idade super avançada e nós ficamos um tiquinho mais próximos de sermos velhinhos fofos juntos!\n \nTe amo, te adoro e se você está lendo isso, meu programa funcionou hehe Beijosss S2"
         )
 
 data = pandas.read_csv("birthdays.csv")
