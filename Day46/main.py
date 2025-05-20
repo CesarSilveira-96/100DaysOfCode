@@ -21,8 +21,8 @@ user_id = sp.current_user()["id"]
 
 BILLBOARD_URL = "https://www.billboard.com/charts/hot-100/"
 
-# date_choice = input("Write the date you would like to travel to. The only format accepted will be YYYY-MM-DD:\n")
-date_choice = "1999-06-06"
+date_choice = input("Write the date you would like to travel to. The only format accepted will be YYYY-MM-DD:\n")
+# date_choice = "1999-06-06"
 header = {
     "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                  "AppleWebKit/537.36 (KHTML, like Gecko) "
