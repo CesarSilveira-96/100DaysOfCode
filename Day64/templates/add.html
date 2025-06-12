@@ -3,7 +3,42 @@
 {% block title %}Add Movie{% endblock %}
 
 {% block content %}
-<div class="content">
-    <h1 class="heading">Add a Movie</h1>
-</div>
+ <div class="container mt-4">
+    <h1>Add a New Movie to the Ranking:</h1>
+    <form method="POST" novalidate>
+      {{ form.hidden_tag() }}
+
+      <div class="mb-3">
+        {{ form.movie_title.label(class="form-label") }}
+        {{ form.movie_title(class="form-control", placeholder="Enter the movie title") }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.year.label(class="form-label") }}
+        {{ form.year(class="form-control", placeholder="Enter the year of release") }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.review.label(class="form-label") }}
+        {{ form.review(class="form-control", placeholder="Enter a review") }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.movie_synopsis.label(class="form-label") }}
+        {{ form.movie_synopsis(class="form-control", placeholder="Enter a brief synopsis") }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.movie_rating.label(class="form-label") }}
+        {{ form.movie_rating(class="form-control", placeholder="Enter a rating (1 to 10)") }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.img_url.label(class="form-label") }}
+        {{ form.img_url(class="form-control") }}
+      </div>
+
+      {{ form.submit(class="btn btn-primary") }}
+    </form>
+  </div>
 {% endblock %}

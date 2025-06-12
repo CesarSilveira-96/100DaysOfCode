@@ -33,6 +33,16 @@
 	 overflow: hidden;
 	 text-overflow: ellipsis;
 }
+
+.header-bar {
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Opcional: quebra em telas pequenas */
+  gap: 1rem; /* Espaço entre título e botão */
+}
+
  .heading {
 	 width: 100%;
 	 margin-left: 1rem;
@@ -65,21 +75,24 @@
 	 cursor: pointer;
 	 width: calc(33% - 3rem);
 	 min-width: calc(33% - 3rem);
-	 height: 400px;
-	 min-height: 400px;
+	 height: 450px;
+	 min-height: 450px;
 	 perspective: 1000px;
 	 margin: 1rem auto;
 	 position: relative;
 }
- @media screen and (max-width: 800px) {
-	 .card {
-		 width: calc(50% - 3rem);
-	}
+@media screen and (max-width: 990px) {
+  .card {
+    width: calc(50% - 2rem);
+    min-width: 280px;
+  }
 }
- @media screen and (max-width: 500px) {
-	 .card {
-		 width: 100%;
-	}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 90%;
+    min-width: 280px;
+  }
 }
  .front, .back {
 	 display: flex;
@@ -138,6 +151,9 @@
  .card:nth-child(even):hover .back {
 	 transform: rotateY(0deg);
 }
+.card .button {
+  width: 80%; /* relativo ao card */
+}
  .button {
 	 transform: translateZ(40px);
 	 cursor: pointer;
@@ -145,7 +161,7 @@
 	 backface-visibility: hidden;
 	 font-weight: bold;
 	 color: #fff;
-	 padding: 0.5em 1em;
+	 padding: 0.30em 0.6em;
 	 border-radius: 100px;
 	 font: inherit;
 	 background: linear-gradient(135deg, #1a9be6, #1a57e6);
@@ -153,6 +169,12 @@
 	 position: relative;
 	 transform-style: preserve-3d;
 	 transition: 300ms ease;
+     width: 100%;
+     max-width: 200px;    /* limite opcional para não esticar demais */
+     box-sizing: border-box;
+     whitespace: nowrap;
+     display: block;
+     text-align: center;
 }
  .button:before {
 	 transition: 300ms ease;
@@ -162,13 +184,13 @@
 	 transform: translateZ(-40px);
 	 -webkit-backface-visibility: hidden;
 	 backface-visibility: hidden;
-	 height: calc(100% - 20px);
-	 width: calc(100% - 20px);
-	 border-radius: 100px;
-	 left: 10px;
-	 top: 16px;
-	 box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
-	 background-color: rgba(26, 87, 230, 0.25);
+	 height: 100%;
+     width: 100%;
+     border-radius: 100px;
+     left: 0;
+     top: 0;
+     box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
+     background-color: rgba(26, 87, 230, 0.25);
 }
 
 .button.delete-button {
@@ -192,6 +214,16 @@
 	 transform: translateZ(-20px);
 	 top: 12px;
 	 top: 12px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;            /* quebra em colunas menores */
+    justify-content: center;    /* centraliza */
 }
 .container.add {
     margin-top: 40px;

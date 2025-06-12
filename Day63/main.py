@@ -65,10 +65,6 @@ def add():
         "author":form.book_author.data,
         "rating":form.book_rating.data
         }
-        if new_book_dict not in all_books:
-            all_books.append(new_book_dict)
-        #
-        # print(all_books)
         existing_book = db.session.execute(db.select(Book).filter_by(title=form.book_title.data)).scalar()
         if existing_book:
             # Exibir uma mensagem de erro ou redirecionar

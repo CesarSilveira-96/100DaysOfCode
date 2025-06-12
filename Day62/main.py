@@ -1,8 +1,6 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap5
 from flask_wtf import FlaskForm
-from pandas.core.interchange.dataframe_protocol import DataFrame
-from werkzeug.utils import redirect
 from wtforms import StringField, SubmitField, SelectField, URLField
 from wtforms.validators import DataRequired
 import pandas
