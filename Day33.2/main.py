@@ -8,7 +8,7 @@ MY_LONG = -46.968974
 
 # ---------------------- EMAIL SENDER ----------------------------------------------------------------------
 USER_EMAIL = "testepythoncesar@gmail.com"
-USER_PW = "iyzdadrqmcmstapw"
+USER_PW = "wehmogqtrsvhtpzh"
 
 def send_email():
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
