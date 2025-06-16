@@ -1,0 +1,33 @@
+ol{
+    margin-left: -40px;
+    margin-top: -20px;
+    list-style-position: inside;
+}
+
+.color-title{
+    font-weight: normal;
+}
+
+#red{
+    color: red;
+}
+
+#blue{
+    color: rgb(73, 157, 254);
+}
+
+#orange{
+    color: rgb(255, 140, 0);
+}
+
+#green{
+    color: green;
+}
+
+#yellow{
+    color: yellow;
+}
+
+img{
+    width: 200px; height: 200px;
+}
