@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>César's Blogs</h1>
+    <div class="all_posts=">
+        <h2>What do you want to read?</h2>
+        <ul class="posts_list">
+        {% for blog_post in posts: %}
+            {% if blog_post["id"] == 2: %}
+                <li class="post">
+                    <h3>{{blog_post["title"]}}</h3>
+                    <p>{{blog_post["subtitle"]}}</p><br>
+                </li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

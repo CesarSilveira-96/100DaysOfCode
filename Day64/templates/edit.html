@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Movie Rating{% endblock %}
+
+{% block content %}
+<body>
+     <form action="{{ url_for('edit') }}" method="POST">
+        <p>Movie Name: {{movie.title}}</p>
+        <p>Current Rating {{movie.rating}}</p>
+        <input hidden="hidden" name="id" value="{{movie.id}}">
+        <input name="rating" type="text" placeholder="New Rating">
+        <input name="review" type="text" placeholder="New Review">
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+{% endblock %}

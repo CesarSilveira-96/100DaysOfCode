@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+<!--Don't forget your import here-->
+{% block title %}Add A New Book{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h1>Add a New Book to the Library:</h1>
+    <form method="POST" novalidate>
+      {{ form.hidden_tag() }}
+
+      <div class="mb-3">
+        {{ form.book_title.label(class="form-label") }}
+        {{ form.book_title(class="form-control", placeholder="Enter the book title") }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.book_author.label(class="form-label") }}
+        {{ form.book_author(class="form-control", placeholder="Enter the author") }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.book_rating.label(class="form-label") }}
+        {{ form.book_rating(class="form-control", placeholder="Enter a rating (1 to 10)") }}
+      </div>
+
+      {{ form.submit(class="btn btn-primary") }}
+    </form>
+  </div>
+{% endblock %}
