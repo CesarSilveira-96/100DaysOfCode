@@ -8,6 +8,7 @@ from wtforms import StringField, SubmitField, SelectField, HiddenField
 from wtforms.fields.simple import URLField
 from wtforms.validators import DataRequired, InputRequired
 from datetime import datetime
+import os
 
 
 
@@ -15,7 +16,7 @@ hours = [f"{hour}:00" for hour in range(0, 24)]
 
 # cafes_data = pandas.read_csv('cafe-data.csv')
 
-app = Flask(__name__)
+app = Flask(__name__, instance_path=os.path.join(os.path.dirname(__file__), 'instance'))
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 bootstrap = Bootstrap(app)
 
