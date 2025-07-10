@@ -92,8 +92,8 @@ def add():
         }
         existing_movie = db.session.execute(db.select(Movie).filter_by(title=form.movie_title.data)).scalar()
         if existing_movie:
-            # Exibir uma mensagem de erro ou redirecionar
-            return "Filme já existe!", 400
+            # Exibit error message
+            return "Movie already exists!", 400
         new_movie = Movie(
             title=form.movie_title.data.title(),
             year=form.year.data,
