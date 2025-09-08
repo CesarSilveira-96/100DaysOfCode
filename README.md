@@ -1,11 +1,11 @@
-# 💯 100 Days of Code: The Complete Python Bootcamp
+# 100 Days of Code: The Complete Python Bootcamp
 
 This repository tracks my progress through the course **100 Days of Code: The Complete Python Bootcamp** by the [London App Brewery](https://www.londonappbrewery.com/).  
 The course covers Python from beginner to advanced level, with a hands-on, project-based approach.
 
 ---
 
-## 📅 Progress
+## Progress
 
 | Day | Project / Topic | Technologies / Concepts |
 |-----|------------------|--------------------------|
